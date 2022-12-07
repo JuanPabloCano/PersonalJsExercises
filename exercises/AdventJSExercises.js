@@ -145,3 +145,15 @@ function countHours(year, holidays) {
 const year = 2022;
 const holidays = ['01/06', '04/01', '12/25'];
 countHours(year, holidays);
+
+// Demo
+const countries = ['USA', 'Australia', 'Australia', 'France', 'India', 'USA'];
+
+countries.forEach((value, index, arr) => {
+	arr.forEach((val, idx) => {
+		if (val === value && index < idx) {
+			if (idx === index + 1) console.log(`Bingo ${value}`);
+			else console.log(`Hooray ${value}`);
+		}
+	});
+});
