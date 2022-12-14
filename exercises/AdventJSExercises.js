@@ -179,3 +179,15 @@ const packOfGifts = ['book', 'doll', 'ball'];
 const reindeers = ['dasher', 'dancer'];
 
 distributeGifts(packOfGifts, reindeers);
+
+/** Check if a given array of words has palindromes*/
+
+const isPalindrome = (words) => {
+	words.forEach((word) => {
+		const isWordPalindrome = word.split('').reverse().join('');
+		if (isWordPalindrome.toLowerCase() === word.toLowerCase()) console.log(`${word} is palindrome`);
+		else console.log(`${word} is not palindrome`);
+	});
+};
+
+isPalindrome(['Home', 'HomePage', 'Anna', 'Bird', 'Deed', 'Kayak', 'Word'])
