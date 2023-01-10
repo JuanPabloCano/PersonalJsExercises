@@ -216,3 +216,34 @@ function fitsInOneBox(boxes) {
 		);
 }
 console.log(fitsInOneBox(obj));
+
+/**
+ * Find how many days a month has
+ */
+
+function getDays(month, year) {
+	return new Date(year, month, 0).getDate();
+}
+
+getDays(01, 2023);
+
+/**
+ * Make a function that asserts that every element in the array is greater than the next
+ */
+
+const arr = [3, 2, 1];
+
+const returnRes = arr.every(
+	(value, index, arr) => value > arr[index + 1] || index === arr.length - 1
+);
+
+console.log(returnRes);
+
+const response = arr.every((value, index, arr) => {
+	if (index + 1 === arr.length) {
+		return true;
+	}
+	return value > arr[index + 1];
+});
+
+console.log(response);
